@@ -12,8 +12,8 @@
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <body class="font-sans antialiased flex flex-col min-h-screen">
+        <div class="flex-grow bg-gray-100 dark:bg-gray-900">
             @include('components.navbar')
 
             @hasSection('header')
@@ -27,8 +27,10 @@
             <main>
                 @yield('content')
             </main>
-
-            @include('components.footer')
         </div>
+
+        @if (!isset($hideFooter) || $hideFooter !== true)
+            @include('components.footer')
+        @endif
     </body>
 </html>
