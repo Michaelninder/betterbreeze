@@ -63,4 +63,17 @@ class User extends Authenticatable
             $model->{$model->getKeyName()} = (string) Str::uuid();
         });
     }
+    
+    public function avatar()
+    {
+        if ($this->avatar_path) {
+            return Storage::url($this->avatar_path);
+        }
+
+        if ($this->name_first && $this->name_last) {
+            return 'https://ui-avatars.com/api/?name=' . urlencode($this->name_first . ' ' . $this->name_last) . '&color=FFFFFF&background=111827';
+        }
+
+        return 'https://ui-avatars.com/api/?name=' . urlencode($this->username) . '&color=FFFFFF&background=111827';
+    }
 }
