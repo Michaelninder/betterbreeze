@@ -2,13 +2,12 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Base\PageController as BasePageController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [BasePageController::class, 'lander'])->name('lander');
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('pages.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
