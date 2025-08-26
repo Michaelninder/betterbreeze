@@ -32,5 +32,9 @@
         @if (!isset($hideFooter) || $hideFooter !== true)
             @include('components.footer')
         @endif
+
+        @if (!isset($hideScrollToTopBtn) || $hideScrollToTopBtn !== true)
+            @include('components.scroll-to-top-btn')
+        @endif
     </body>
 </html>
