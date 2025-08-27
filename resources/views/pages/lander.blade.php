@@ -10,6 +10,7 @@
     @include('pages.lander._features')
     @include('pages.lander._pricing')
     @include('pages.lander._tech')
+    @include('pages.lander._capabilities')
     @include('pages.lander._faq')
     @include('pages.lander._sales-cta')
     @include('pages.lander._discord-cta')
