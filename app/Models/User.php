@@ -76,4 +76,17 @@ class User extends Authenticatable
 
         return 'https://ui-avatars.com/api/?name=' . urlencode($this->username) . '&color=FFFFFF&background=111827';
     }
+
+    public function getGreetName()
+    {
+        if ($this->name_first) {
+            if ($this->name_last) {
+                return "{$this->name_first} {$this->name_last}";
+            } else {
+                return $this->name_first;
+            }
+        }
+
+        return $this->username;
+    }
 }
