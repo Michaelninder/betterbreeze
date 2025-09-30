@@ -17,7 +17,7 @@
 
                 <div>
                     <x-input-label for="avatar" :value="__('Avatar')" />
-                    <x-text-input id="avatar" name="avatar" type="file" class="mt-1 block w-full" />
+                    <x-file-input id="avatar" name="avatar" class="mt-1 block w-full" />
                     <x-input-error class="mt-2" :messages="$errors->get('avatar')" />
                 </div>
 
