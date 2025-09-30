@@ -11,20 +11,34 @@
                 {{ __('Update your account\'s avatar.') }}
             </p>
 
-            <form method="post" action="{{ route('settings.avatar.update') }}" enctype="multipart/form-data" class="mt-6 space-y-6">
-                @csrf
-                @method('patch')
+            <div x-data="{ preview: '{{ auth()->user()->avatar() }}' }" class="mt-6 space-y-6">
+                <div class="flex items-center space-x-6">
+                    <div class="shrink-0">
+                        <img class="h-20 w-20 rounded-full object-cover" :src="preview" alt="Current avatar">
+                    </div>
+                    <form method="post" action="{{ route('settings.avatar.update') }}" enctype="multipart/form-data" class="flex items-center space-x-6">
+                        @csrf
+                        @method('patch')
+                        <div>
+                            <x-input-label for="avatar" :value="__('New Avatar')" />
+                            <x-file-input id="avatar" name="avatar" class="mt-1 block w-full" @change="preview = URL.createObjectURL($event.target.files[0])" />
+                            <x-input-error class="mt-2" :messages="$errors->get('avatar')" />
+                        </div>
 
-                <div>
-                    <x-input-label for="avatar" :value="__('Avatar')" />
-                    <x-file-input id="avatar" name="avatar" class="mt-1 block w-full" />
-                    <x-input-error class="mt-2" :messages="$errors->get('avatar')" />
+                        <div class="flex items-center gap-4">
+                            <x-primary-button>{{ __('Save') }}</x-primary-button>
+                        </div>
+                    </form>
                 </div>
 
-                <div class="flex items-center gap-4">
-                    <x-primary-button>{{ __('Save') }}</x-primary-button>
-                </div>
-            </form>
+                @if (auth()->user()->avatar_path)
+                    <form method="post" action="{{ route('settings.avatar.destroy') }}">
+                        @csrf
+                        @method('delete')
+                        <x-danger-button>{{ __('Remove Avatar') }}</x-danger-button>
+                    </form>
+                @endif
+            </div>
         </div>
     </div>
 @endsection
