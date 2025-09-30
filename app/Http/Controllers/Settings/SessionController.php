@@ -10,47 +10,42 @@ use Illuminate\Support\Facades\DB;
 
 class SessionController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index(Request $request)
     {
-        $sessions = Session::where('user_id', Auth::id())->get();
+        $sessions = DB::table('sessions')
+            ->where('user_id', Auth::id())
+            ->get()
+            ->map(function ($session) use ($request) {
+                $agent = new \Jenssegers\Agent\Agent();
+                $agent->setUserAgent($session->user_agent);
+
+                return (object) [
+                    'id' => $session->id,
+                    'agent' => $agent,
+                    'ip_address' => $session->ip_address,
+                    'is_current_device' => $session->id === $request->session()->getId(),
+                    'last_active' => \Carbon\Carbon::createFromTimestamp($session->last_activity)->diffForHumans(),
+                ];
+            });
+
 
         return view('settings.sessions.index', [
             'sessions' => $sessions,
         ]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Session  $session
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Request $request, Session $session)
+    public function destroy(Request $request, $id)
     {
-        if ($session->user_id !== Auth::id()) {
-            abort(403);
-        }
-
-        $session->delete();
+        DB::table('sessions')->where('id', $id)->where('user_id', Auth::id())->delete();
 
         return redirect()->route('settings.sessions.index')
             ->with('status', 'Session invalidated successfully.');
     }
 
-    /**
-     * Remove all other sessions for the user.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function destroyAllOthers(Request $request)
     {
-        Session::where('user_id', Auth::id())
+        DB::table('sessions')
+            ->where('user_id', Auth::id())
             ->where('id', '!=', $request->session()->getId())
             ->delete();
 
