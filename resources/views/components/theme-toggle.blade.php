@@ -24,25 +24,51 @@
             this.theme = themes[(currentIndex + 1) % themes.length];
         }
     }"
-    class="relative inline-flex items-center justify-center p-2 rounded-full cursor-pointer ms-4"
+    class="relative inline-flex items-center justify-center ms-4"
 >
-    <button @click="toggleTheme()" class="w-8 h-8 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition duration-150 ease-in-out">
+    <button 
+        @click="toggleTheme()" 
+        class="w-10 aspect-square flex items-center justify-center 
+               rounded-xl cursor-pointer
+               text-gray-500 dark:text-gray-400 
+               hover:bg-gray-200 dark:hover:bg-gray-700 
+               hover:text-gray-700 dark:hover:text-gray-300 
+               transition duration-200 ease-in-out"
+    >
+        <!-- System Icon -->
         <template x-if="theme === 'system'">
-            <!-- System Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0h-3.375m0 0ve7.5m-3.375 3.75h.008v.008h-.008v-.008zm-9.375 0h.008v.008h-.008v-.008zM9 17.25V7.5a2.25 2.25 0 012.25-2.25h2.5A2.25 2.25 0 0115 7.5v9.75m-9-6h2.25m-2.25 0h-1.5" />
+            <svg xmlns="http://www.w3.org/2000/svg" 
+                 viewBox="0 0 24 24" 
+                 fill="none" stroke="currentColor" 
+                 stroke-width="1.5" 
+                 class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" 
+                      d="M9.75 17.25v1.25a2 2 0 01-.586 1.414L8.25 21h7.5l-.914-.914A2 2 0 0114.25 18.5v-1.25m5.5-12v11.25a1.75 1.75 0 01-1.75 1.75H6.75A1.75 1.75 0 015 15.25V5.25A1.75 1.75 0 016.75 3.5h10.5a1.75 1.75 0 011.75 1.75z"/>
             </svg>
         </template>
+
+        <!-- Dark Icon -->
         <template x-if="theme === 'dark'">
-            <!-- Dark Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.61.748-3.752A9.758 9.758 0 0112 3c5.385 0 9.75 4.365 9.75 9.75 0 1.33-.266 2.61-.748 3.752z" />
+            <svg xmlns="http://www.w3.org/2000/svg" 
+                 viewBox="0 0 24 24" 
+                 fill="none" stroke="currentColor" 
+                 stroke-width="1.5" 
+                 class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" 
+                      d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
             </svg>
         </template>
+
+        <!-- Light Icon -->
         <template x-if="theme === 'light'">
-            <!-- Light Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 21v-2.25m-6.364-.386l1.591-1.591M3 12h2.25m-.386-6.364l1.591 1.591M12 18a6 6 0 100-12 6 6 0 000 12z" />
+            <svg xmlns="http://www.w3.org/2000/svg" 
+                 viewBox="0 0 24 24" 
+                 fill="none" stroke="currentColor" 
+                 stroke-width="1.5" 
+                 class="w-6 h-6">
+                <circle cx="12" cy="12" r="5"/>
+                <path stroke-linecap="round" stroke-linejoin="round" 
+                      d="M12 1v2m0 18v2m11-11h-2M3 12H1m16.95 7.05l-1.41-1.41M6.46 6.46L5.05 5.05m12.9 0l-1.41 1.41M6.46 17.54l-1.41 1.41"/>
             </svg>
         </template>
     </button>
