@@ -17,6 +17,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/settings/avatar', [\App\Http\Controllers\Settings\AvatarController::class, 'edit'])->name('settings.avatar');
+    Route::patch('/settings/avatar', [\App\Http\Controllers\Settings\AvatarController::class, 'update'])->name('settings.avatar.update');
 });
 
 require __DIR__.'/auth.php';

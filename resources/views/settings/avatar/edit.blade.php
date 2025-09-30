@@ -11,7 +11,7 @@
                 {{ __('Update your account\'s avatar.') }}
             </p>
 
-            <form method="post" action="#" class="mt-6 space-y-6">
+            <form method="post" action="{{ route('settings.avatar.update') }}" enctype="multipart/form-data" class="mt-6 space-y-6">
                 @csrf
                 @method('patch')
 
