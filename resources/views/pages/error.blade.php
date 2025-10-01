@@ -6,7 +6,7 @@
             <h1 class="text-6xl font-bold text-gray-800 dark:text-gray-200">{{ $errorCode }}</h1>
             <p class="mt-4 text-2xl text-gray-600 dark:text-gray-400">{{ $errorMessage }}</p>
             <p class="mt-2 text-lg text-gray-500 dark:text-gray-300">{{ $errorDescription }}</p>
-            <a href="{{ url('/') }}" class="mt-6 inline-block px-6 py-3 text-lg font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-700">
+            <a href="{{ url('/') }}" class="mt-6 inline-block px-6 py-3 text-lg font-semibold text-white bg-primary rounded-md hover:bg-primary-dark">
                 Go to Homepage
             </a>
         </div>
