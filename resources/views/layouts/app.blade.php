@@ -18,7 +18,9 @@
     </head>
     <body class="font-sans antialiased flex flex-col min-h-screen">
         <div class="flex-grow bg-gray-100 dark:bg-gray-900">
-            @include('components.navbar')
+            @if (!isset($hideNavbar) || $hideNavbar !== true)
+                @include('components.navbar')
+            @endif
 
             @hasSection('header')
                 <header class="bg-white dark:bg-gray-800 shadow">
