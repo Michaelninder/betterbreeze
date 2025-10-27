@@ -1,4 +1,3 @@
-{{-- resources/views/pages/lander.blade.php --}}
 @extends('layouts.app')
 
 @section('content')

@@ -1,7 +1,7 @@
 <div class="bg-gray-50 dark:bg-gray-800 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:text-center">
-            <h2 class="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-400">API</h2>
+            <h2 class="text-base font-semibold leading-7 text-brand-600 dark:text-brand-400">API</h2>
             <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
                 {{ __('lander.api_showcase.title') }}
             </p>
@@ -40,7 +40,7 @@ getProjects();
                 </code></pre>
             </div>
             <div class="mt-8 text-center">
-                <a href="#" class="text-base font-semibold leading-7 text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">
+                <a href="#" class="text-base font-semibold leading-7 text-brand-600 hover:text-brand-500 dark:text-brand-400 dark:hover:text-brand-300">
                     {{ __('lander.api_showcase.more_api_docs') }} <span aria-hidden="true">→</span>
                 </a>
             </div>

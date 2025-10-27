@@ -1,7 +1,7 @@
 <div class="bg-gray-50 dark:bg-gray-800 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:text-center">
-            <h2 class="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-400">Capabilities</h2>
+            <h2 class="text-base font-semibold leading-7 text-brand-600 dark:text-brand-400">Capabilities</h2>
             <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">{{ __('lander.capabilities.title') }}</p>
             <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">{{ __('lander.capabilities.subtitle') }}</p>
         </div>
@@ -10,7 +10,7 @@
                 @foreach (__('lander.capabilities.items') as $feature)
                     <div class="relative">
                         <dt class="flex items-center text-base font-semibold leading-7 text-gray-900 dark:text-white">
-                            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-600">
                                 <i class="{{ $feature['icon'] }} text-white text-2xl"></i>
                             </div>
                             <span class="ml-16">{{ $feature['title'] }}</span>

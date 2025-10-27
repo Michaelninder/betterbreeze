@@ -43,6 +43,6 @@
             @include('components.scroll-to-top-btn')
         @endif
 
-        @include('components.toast-notifications')
+        @include('components.session-notifications')
     </body>
 </html>

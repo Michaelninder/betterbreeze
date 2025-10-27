@@ -14,10 +14,10 @@
             <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">{{ __('lander.hero.subtitle') }}</p>
             <div class="mt-10 flex items-center gap-x-6">
                 @guest
-                    <a href="{{ route('register') }}" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{ __('lander.hero.guest_cta_btn') }}</a>
+                    <a href="{{ route('register') }}" class="rounded-md bg-brand-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600">{{ __('lander.hero.guest_cta_btn') }}</a>
                 @endguest
                 @auth
-                    <a href="{{ route('dashboard') }}" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{ __('lander.hero.auth_cta_btn') }}</a>
+                    <a href="{{ route('dashboard') }}" class="rounded-md bg-brand-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600">{{ __('lander.hero.auth_cta_btn') }}</a>
                 @endauth
                 <a href="#" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">{{ __('lander.hero.more_cta_btn') }} <span aria-hidden="true">→</span></a>
             </div>

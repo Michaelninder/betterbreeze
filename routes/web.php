@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Base\PageController as BasePageController;
 use App\Http\Controllers\Settings\SessionController; // Added this line
 
-Route::get('/', [BasePageController::class, 'lander'])->name('lander');
+Route::get('/', [BasePageController::class, 'lander'])->name('pages.lander');
 
 Route::get('/dashboard', function () {
     return view('pages.dashboard');
