@@ -2,6 +2,30 @@
 
 return [
 
+    'legal_sections' => [
+        'imprint',
+        'terms_of_service',
+        'privacy_policy',
+        'cookie_policy',
+    ],
+
+    'locales' => [
+        'en' => 'English',
+        'de' => 'Deutsch',
+        'fr' => 'Français',
+        'es' => 'Español',
+        'it' => 'Italiano',
+        'nl' => 'Nederlands',
+        'pt' => 'Português',
+        'sv' => 'Svenska',
+        'lt' => 'Lietuvių',
+        'pl' => 'Polski',
+        'cs' => 'Čeština',
+        'nb' => 'Norsk Bokmål',
+        'da' => 'Dansk',
+        'fi' => 'Suomi',
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Application Name

@@ -2,11 +2,27 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Base\PageController as BasePageController;
+use App\Http\Controllers\PageController as PageController;
 use App\Http\Controllers\Settings\SessionController as SettingsSessionController;
 use App\Http\Controllers\Settings\AvatarController as SettingsAvatarController;
 
-Route::get('/', [BasePageController::class, 'lander'])->name('pages.lander');
+Route::get('/', function () {
+    if (auth()->check()) {
+        return redirect()->route('dashboard');
+    }
+    return redirect()->route('pages.lander');
+})->name('home');
+
+Route::get('/lander', [PageController::class, 'lander'])->name('pages.lander');
+Route::get('/legal/{section}', [PageController::class, 'legal'])->name('pages.legal');
+Route::get('/error/{code}', [PageController::class, 'error'])->name('pages.error');
+Route::get('locale/{locale}', [PageController::class, 'setLocale'])->name('locale.set');
+Route::post('locale/dismiss', [PageController::class, 'dismissSuggestion'])->name('locale.dismiss');
+Route::get('/sitemap', [PageController::class, 'sitemap'])->name('pages.sitemap');
+Route::get('/sitemap.xml', [PageController::class, 'sitemapXml'])->name('pages.sitemap.xml');
+Route::get('/sitemap/raw', [PageController::class, 'sitemapXml']);
+Route::get('/status', [PageController::class, 'status'])->name('pages.status');
+Route::get('/dashboard', [PageController::class, 'dashboard'])->name('pages.dashboard');
 
 Route::get('/dashboard', function () {
     return view('pages.dashboard');
