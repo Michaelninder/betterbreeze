@@ -42,5 +42,7 @@
         @if (!isset($hideScrollToTopBtn) || $hideScrollToTopBtn !== true)
             @include('components.scroll-to-top-btn')
         @endif
+
+        @include('components.toast-notifications')
     </body>
 </html>
