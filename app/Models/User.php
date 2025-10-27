@@ -90,4 +90,8 @@ class User extends Authenticatable
 
         return $this->username;
     }
+
+    public function getDisplayableAvatar() {
+        return $this->avatar();
+    }
 }
