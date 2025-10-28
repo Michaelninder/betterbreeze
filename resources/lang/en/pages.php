@@ -222,106 +222,106 @@ This Privacy Policy outlines how Gimy.Site collects, uses, and protects your inf
 ',
             '_content' => '# Privacy Policy
 
-    This Privacy Policy outlines how this free service collects, uses, and protects your information.
+This Privacy Policy outlines how this free service collects, uses, and protects your information.
 
-    ## 1. Information We Collect
-    We collect minimal personal data:
-    *   Email address
-    *   First name and last name (if provided)
-    *   Data provided by OAuth services (if used)
-    *   Usage Data (IP address, browser type, pages visited)
+## 1. Information We Collect
+We collect minimal personal data:
+*   Email address
+*   First name and last name (if provided)
+*   Data provided by OAuth services (if used)
+*   Usage Data (IP address, browser type, pages visited)
 
-    ## 2. How We Use Your Information
-    Your data is used solely to provide and improve our service, manage your account, and communicate with you about service updates or offers.
+## 2. How We Use Your Information
+Your data is used solely to provide and improve our service, manage your account, and communicate with you about service updates or offers.
 
-    ## 3. Data Retention
-    We retain your personal data only as long as necessary for the purposes outlined in this policy or to comply with legal obligations.
+## 3. Data Retention
+We retain your personal data only as long as necessary for the purposes outlined in this policy or to comply with legal obligations.
 
-    ## 4. Data Security
-    We prioritize the security of your data but acknowledge that no internet transmission or electronic storage is 100% secure.
+## 4. Data Security
+We prioritize the security of your data but acknowledge that no internet transmission or electronic storage is 100% secure.
 
-    ## 5. Third-Party Links
-    Our service may contain links to third-party websites. We are not responsible for their content or privacy practices.
+## 5. Third-Party Links
+Our service may contain links to third-party websites. We are not responsible for their content or privacy practices.
 
-    ## 6. Your Rights
-    You can request to access, correct, or delete your personal data.
+## 6. Your Rights
+You can request to access, correct, or delete your personal data.
 
-    ## 7. Changes to this Policy
-    We may update this policy periodically. Significant changes will be communicated via email or a prominent notice on our service.
+## 7. Changes to this Policy
+We may update this policy periodically. Significant changes will be communicated via email or a prominent notice on our service.
 
-    ## 8. Contact Us
-    For any privacy-related questions, please contact us at f.ternis@xpsystems.eu.
+## 8. Contact Us
+For any privacy-related questions, please contact us at f.ternis@xpsystems.eu.
     ',
         ],
         'terms' => [
             'title' => 'Terms of Service',
             'content' => '# Terms of Service
 
-    Welcome to this free service provided by XPsystems.eu / europehost.eu. By using our service, you agree to these terms.
+Welcome to this free service provided by XPsystems.eu / europehost.eu. By using our service, you agree to these terms.
 
-    ## 1. User Accounts
-    You are responsible for maintaining the confidentiality of your account information. You must be over 18 to use this service.
+## 1. User Accounts
+You are responsible for maintaining the confidentiality of your account information. You must be over 18 to use this service.
 
-    ## 2. Content
-    You are solely responsible for the content you upload, ensuring it is legal, appropriate, and does not infringe on any third-party rights. We reserve the right to remove any objectionable content.
-    **Important:** While we perform regular backups, we do not guarantee against data loss or corruption. You are responsible for maintaining your own content backups.
+## 2. Content
+You are solely responsible for the content you upload, ensuring it is legal, appropriate, and does not infringe on any third-party rights. We reserve the right to remove any objectionable content.
+**Important:** While we perform regular backups, we do not guarantee against data loss or corruption. You are responsible for maintaining your own content backups.
 
-    ## 3. Service Usage
-    This is a free service. We reserve the right to terminate or suspend your account, and remove your data, for any reason or no reason, with or without prior notice. Exploiting the service may lead to an immediate ban and potential legal consequences.
+## 3. Service Usage
+This is a free service. We reserve the right to terminate or suspend your account, and remove your data, for any reason or no reason, with or without prior notice. Exploiting the service may lead to an immediate ban and potential legal consequences.
 
-    ## 4. Limitation of Liability
-    This service is provided "AS IS" without warranties. We are not liable for any damages or losses arising from your use of the service. There are no guarantees, including no uptime guarantee. This service may be shut down at any time for any reason, without prior notice. Our liability is limited to 100 EUR if no payment was made.
+## 4. Limitation of Liability
+This service is provided "AS IS" without warranties. We are not liable for any damages or losses arising from your use of the service. There are no guarantees, including no uptime guarantee. This service may be shut down at any time for any reason, without prior notice. Our liability is limited to 100 EUR if no payment was made.
 
-    ## 5. Governing Law
-    These terms are governed by the laws of Germany.
+## 5. Governing Law
+These terms are governed by the laws of Germany.
 
-    ## 6. Changes to Terms
-    We may modify these terms at any time. Continued use of the service after changes constitutes acceptance.
+## 6. Changes to Terms
+We may modify these terms at any time. Continued use of the service after changes constitutes acceptance.
 
-    ## 7. Contact Us
-    For questions regarding these terms, contact us at f.ternis@xpsystems.eu.
-    ',
-        ],
-        'cookies' => [
-            'title' => 'Cookie Policy',
-            'content' => '# Cookie Policy
+## 7. Contact Us
+For questions regarding these terms, contact us at f.ternis@xpsystems.eu.
+',
+    ],
+    'cookies' => [
+        'title' => 'Cookie Policy',
+        'content' => '# Cookie Policy
 
-    This policy explains how this free service uses cookies.
+This policy explains how this free service uses cookies.
 
-    ## 1. What are Cookies?
-    Cookies are small text files stored on your device that contain information about your browsing history.
+## 1. What are Cookies?
+Cookies are small text files stored on your device that contain information about your browsing history.
 
-    ## 2. How We Use Cookies
-    We use cookies for:
-    *   **Essential functionality:** To make our website work correctly and securely.
-    *   **Preference storage:** To remember your choices like login details or language.
-    *   **Analytics (Third-Party):** To understand how visitors use our site, helping us improve it.
+## 2. How We Use Cookies
+We use cookies for:
+*   **Essential functionality:** To make our website work correctly and securely.
+*   **Preference storage:** To remember your choices like login details or language.
+*   **Analytics (Third-Party):** To understand how visitors use our site, helping us improve it.
 
-    ## 3. Your Choices
-    You can disable cookies through your browser settings, but this may affect website functionality.
+## 3. Your Choices
+You can disable cookies through your browser settings, but this may affect website functionality.
 
-    ## 4. Contact Us
-    For questions about our Cookie Policy, contact us at f.ternis@xpsystems.eu.
+## 4. Contact Us
+For questions about our Cookie Policy, contact us at f.ternis@xpsystems.eu.
     ',
         ],
         'imprint' => [
             'title' => 'Imprint',
             'content' => '# Imprint
 
-    This service is provided by:
+This service is provided by:
 
-    Fabian Elias Ternis
-    Alzeyer Str. 97
-    67592 Flörsheim-Dalsheim
-    Germany
+Fabian Elias Ternis
+Alzeyer Str. 97
+67592 Flörsheim-Dalsheim
+Germany
 
-    Email: f.ternis@xpsystems.eu
+Email: f.ternis@xpsystems.eu
 
-    This is a free service by europehost.eu, which is a sub-company of XPsystems.eu, led by Fabian Ternis.
+This is a free service by europehost.eu, which is a sub-company of XPsystems.eu, led by Fabian Ternis.
 
-    ## Disclaimer
+## Disclaimer
 
-    This is a FREE service. Any user or data may be deleted at any time for any or no reason, without prior notice. We do not guarantee the availability or integrity of any data stored on our servers. All servers are located in Germany.
+This is a FREE service. Any user or data may be deleted at any time for any or no reason, without prior notice. We do not guarantee the availability or integrity of any data stored on our servers. All servers are located in Germany.
     ',
         ],
     ],
