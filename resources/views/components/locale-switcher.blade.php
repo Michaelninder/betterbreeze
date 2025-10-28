@@ -15,7 +15,8 @@
         x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-75"
         x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
         class="absolute z-50 mt-2 rounded-md shadow-lg w-32 right-0
-               origin-top-right bg-white dark:bg-gray-700 ring-1 ring-black ring-opacity-5 focus:outline-none overflow-hidden"
+               origin-top-right bg-white dark:bg-gray-700 ring-1 ring-black ring-opacity-5 focus:outline-none overflow-hidden
+               max-h-60 overflow-y-auto"
         style="display: none;">
         <div class="py-0">
             @foreach (config('app.locales') as $locale => $name)

@@ -1,11 +1,11 @@
 <section>
     <header>
         <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-            {{ __('Profile Information') }}
+            {{ __('settings.profile.title') }}
         </h2>
 
         <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-            {{ __("Update your account's profile information and email address.") }}
+            {{ __('settings.profile.description') }}
         </p>
     </header>
 
@@ -13,37 +13,19 @@
         @csrf
     </form>
 
-    <form method="post" action="{{ route('profile.update') }}" class="mt-6 space-y-6">
+    <form method="post" action="{{ route('settings.profile.update') }}" class="mt-6 space-y-6">
         @csrf
         @method('patch')
 
         <div>
-            <x-input-label for="username" :value="__('Username')" />
-            <x-text-input id="username" name="username" type="text" class="mt-1 block w-full" :value="old('username', $user->username)" required autocomplete="username" />
-            <x-input-error class="mt-2" :messages="$errors->get('username')" />
+            <x-input-label for="name" :value="__('settings.profile.name')" />
+            <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" autofocus autocomplete="name" />
+            <x-input-error class="mt-2" :messages="$errors->get('name')" />
         </div>
 
         <div>
-            <x-input-label for="name_first" :value="__('First Name')" />
-            <x-text-input id="name_first" name="name_first" type="text" class="mt-1 block w-full" :value="old('name_first', $user->name_first)" autocomplete="given-name" />
-            <x-input-error class="mt-2" :messages="$errors->get('name_first')" />
-        </div>
-
-        <div>
-            <x-input-label for="name_middle" :value="__('Middle Name')" />
-            <x-text-input id="name_middle" name="name_middle" type="text" class="mt-1 block w-full" :value="old('name_middle', $user->name_middle)" autocomplete="additional-name" />
-            <x-input-error class="mt-2" :messages="$errors->get('name_middle')" />
-        </div>
-
-        <div>
-            <x-input-label for="name_last" :value="__('Last Name')" />
-            <x-text-input id="name_last" name="name_last" type="text" class="mt-1 block w-full" :value="old('name_last', $user->name_last)" autocomplete="family-name" />
-            <x-input-error class="mt-2" :messages="$errors->get('name_last')" />
-        </div>
-
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="email" />
+            <x-input-label for="email" :value="__('settings.profile.email')" />
+            <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" autocomplete="username" />
             <x-input-error class="mt-2" :messages="$errors->get('email')" />
 
             @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
@@ -66,7 +48,7 @@
         </div>
 
         <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
+            <x-primary-button>{{ __('settings.profile.update_button') }}</x-primary-button>
 
             @if (session('status') === 'profile-updated')
                 <p
@@ -75,7 +57,7 @@
                     x-transition
                     x-init="setTimeout(() => show = false, 2000)"
                     class="text-sm text-gray-600 dark:text-gray-400"
-                >{{ __('Saved.') }}</p>
+                >{{ __('settings.profile.saved') }}</p>
             @endif
         </div>
     </form>

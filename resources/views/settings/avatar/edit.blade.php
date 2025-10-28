@@ -5,14 +5,14 @@
         <div class="max-w-2xl">
             <header class="mb-8">
                 <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100">
-                    {{ __('Avatar Settings') }}
+                    {{ __('settings.avatar.title') }}
                 </h2>
                 <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                    {{ __('Update your account\'s avatar. Recommended size: 400x400 pixels.') }}
+                    {{ __('settings.avatar.description') }}
                 </p>
             </header>
 
-            <div x-data="{ preview: '{{ auth()->user()->avatar() }}' }" class="space-y-8">
+            <div x-data="{ preview: '{{ auth()->user()->getDisplayableAvatar() }}' }" class="space-y-8">
                 <form method="post" action="{{ route('settings.avatar.update') }}" enctype="multipart/form-data" class="space-y-6">
                     @csrf
                     @method('patch')
@@ -31,7 +31,7 @@
                         <!-- File Input Section -->
                         <div class="flex-1 space-y-4">
                             <div>
-                                <x-input-label for="avatar" :value="__('Choose New Avatar')" class="mb-2" />
+                                <x-input-label for="avatar" :value="__('settings.avatar.choose_new')" class="mb-2" />
                                 <x-wide-file-input 
                                     id="avatar" 
                                     name="avatar" 
@@ -39,14 +39,14 @@
                                     @change="preview = URL.createObjectURL($event.target.files[0])" 
                                 />
                                 <p class="mt-2 text-xs text-gray-500 dark:text-gray-400">
-                                    {{ __('PNG, JPG, GIF up to 2MB') }}
+                                    {{ __('settings.avatar.formats') }}
                                 </p>
                                 <x-input-error class="mt-2" :messages="$errors->get('avatar')" />
                             </div>
 
                             <div class="flex items-center gap-3 pt-2">
                                 <x-primary-button class="px-6">
-                                    {{ __('Upload Avatar') }}
+                                    {{ __('settings.avatar.upload_button') }}
                                 </x-primary-button>
                                 
                                 @if (session('status') === 'avatar-updated')
@@ -55,7 +55,7 @@
                                        x-transition 
                                        x-init="setTimeout(() => show = false, 3000)"
                                        class="text-sm text-green-600 dark:text-green-400">
-                                        {{ __('Saved successfully.') }}
+                                        {{ __('settings.avatar.saved') }}
                                     </p>
                                 @endif
                             </div>
@@ -72,14 +72,14 @@
                             <div class="flex items-start gap-4">
                                 <div class="flex-1">
                                     <h3 class="text-sm font-medium text-gray-900 dark:text-gray-100">
-                                        {{ __('Remove Custom Avatar') }}
+                                        {{ __('settings.avatar.remove_custom') }}
                                     </h3>
                                     <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                                        {{ __('Your avatar will revert to the default placeholder.') }}
+                                        {{ __('settings.avatar.remove_description') }}
                                     </p>
                                 </div>
                                 <x-danger-button class="shrink-0">
-                                    {{ __('Remove Avatar') }}
+                                    {{ __('settings.avatar.remove_button') }}
                                 </x-danger-button>
                             </div>
                         </form>
