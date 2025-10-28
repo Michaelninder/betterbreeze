@@ -3,15 +3,15 @@
         <div class="mx-auto max-w-2xl lg:text-center">
             <h2 class="text-base font-semibold leading-7 text-brand-600 dark:text-brand-400">API</h2>
             <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-                {{ __('lander.api_showcase.title') }}
+                {{ __('pages.lander.api_showcase.title') }}
             </p>
             <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-                {{ __('lander.api_showcase.subtitle') }}
+                {{ __('pages.lander.api_showcase.subtitle') }}
             </p>
         </div>
         <div class="mx-auto max-w-5xl mt-16 sm:mt-20">
             <h3 class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-4">
-                {{ __('lander.api_showcase.example_code_title') }}
+                {{ __('pages.lander.api_showcase.example_code_title') }}
             </h3>
             <div class="bg-gray-900 rounded-lg p-6 font-mono text-sm text-gray-300 overflow-x-auto shadow-xl">
                 <pre><code>
@@ -41,7 +41,7 @@ getProjects();
             </div>
             <div class="mt-8 text-center">
                 <a href="#" class="text-base font-semibold leading-7 text-brand-600 hover:text-brand-500 dark:text-brand-400 dark:hover:text-brand-300">
-                    {{ __('lander.api_showcase.more_api_docs') }} <span aria-hidden="true">→</span>
+                    {{ __('pages.lander.api_showcase.more_api_docs') }} <span aria-hidden="true">→</span>
                 </a>
             </div>
         </div>

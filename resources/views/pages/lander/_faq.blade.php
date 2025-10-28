@@ -1,10 +1,10 @@
 <div class="bg-white dark:bg-gray-900 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-4xl divide-y divide-gray-900/10 dark:divide-gray-100/10">
-            <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900 dark:text-white">{{ __('lander.faq.title') }}</h2>
-            <p class="mt-4 text-base leading-7 text-gray-600 dark:text-gray-300">{{ __('lander.faq.subtitle') }}</p>
+            <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900 dark:text-white">{{ __('pages.lander.faq.title') }}</h2>
+            <p class="mt-4 text-base leading-7 text-gray-600 dark:text-gray-300">{{ __('pages.lander.faq.subtitle') }}</p>
             <dl class="mt-10 space-y-6 divide-y divide-gray-900/10 dark:divide-gray-100/10">
-                @foreach (__('lander.faq.questions') as $faq)
+                @foreach (__('pages.lander.faq.questions') as $faq)
                     <div x-data="{ open: false }" class="pt-6">
                         <dt>
                             <button type="button" @click="open = ! open" class="flex w-full items-start justify-between text-left text-gray-900 dark:text-white" aria-controls="faq-{{ $loop->index }}" aria-expanded="false">

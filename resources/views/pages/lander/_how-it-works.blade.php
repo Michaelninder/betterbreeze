@@ -3,15 +3,15 @@
         <div class="mx-auto max-w-2xl lg:text-center">
             <h2 class="text-base font-semibold leading-7 text-brand-600 dark:text-brand-400">Workflow</h2>
             <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-                {{ __('lander.how_it_works.title') }}
+                {{ __('pages.lander.how_it_works.title') }}
             </p>
             <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-                {{ __('lander.how_it_works.subtitle') }}
+                {{ __('pages.lander.how_it_works.subtitle') }}
             </p>
         </div>
         <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
             <div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
-                @foreach (__('lander.how_it_works.steps') as $step)
+                @foreach (__('pages.lander.how_it_works.steps') as $step)
                     <div>
                         <div class="flex items-center justify-center h-12 w-12 rounded-full bg-brand-600 text-white text-xl font-bold mb-4">
                             {{ $step['step_number'] }}
