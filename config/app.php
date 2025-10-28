@@ -4,9 +4,9 @@ return [
 
     'legal_sections' => [
         'imprint',
-        'terms_of_service',
-        'privacy_policy',
-        'cookie_policy',
+        'terms',
+        'privacy',
+        'cookies',
     ],
 
     'locales' => [
@@ -100,7 +100,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Europe/Berlin',
 
     /*
     |--------------------------------------------------------------------------
