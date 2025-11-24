@@ -42,14 +42,23 @@ class PageController extends Controller
     {
         return view('pages.error', compact('code'));
     }
-#
+
     public function setLocale(Request $request, string $locale)
     {
+        if (!array_key_exists($locale, config('app.locales'))) {
+            return back()->with('error', __('messages.invalid_locale_selected'));
+        }
+
         if (in_array($locale, array_keys(config('app.locales')))) {
             session(['locale' => $locale]);
 
             if (app()->getLocale() !== $locale) {
-                session()->flash('success', __('settings.notifications.locale_switched', ['locale' => config('app.locales')[$locale]]));
+                session()->flash(
+                    'success',
+                    __('messages.locale_switched', [
+                        'language' => config('app.locales')[$locale],
+                    ])
+                );
             }
         }
 

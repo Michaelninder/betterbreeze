@@ -25,7 +25,7 @@
                         <div class="text-xs text-gray-500 dark:text-gray-400 flex items-center">
                             {{ __('pages.dashboard.id') }}: <span id="user-id">{{ Auth::user()->id }}</span>
                             <button type="button" class="ml-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
-                                onclick="copyToClipboard('user-id', '{{ __('pages.dashboard.messages.copied') }}')">
+                                onclick="copyToClipboard('user-id', '{{ __('messages.copied') }}')">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="size-4">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -56,7 +56,7 @@
                 })
                 .catch(err => {
                     console.error('Failed to copy: ', err);
-                    window.showToast('error', '{{ __('pages.dashboard.messages.copy_failed') }}');
+                    window.showToast('error', '{{ __('messages.copy_failed') }}');
                 });
         }
     </script>

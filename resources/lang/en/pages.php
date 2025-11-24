@@ -365,10 +365,6 @@ This is a FREE service. Any user or data may be deleted at any time for any or n
         'username' => 'Username',
         'id' => 'ID',
         'you_are_logged_in' => 'You\'re logged in!',
-        'messages' => [
-            'copied' => 'Copied to clipboard!',
-            'copy_failed' => 'Failed to copy!',
-        ],
     ],
 
     'sitemap' => [
