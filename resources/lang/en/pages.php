@@ -361,6 +361,14 @@ This is a FREE service. Any user or data may be deleted at any time for any or n
         'welcome_message' => 'Welcome to your dashboard, :name!',
         'welcome_subtitle' => 'Here you can manage your static websites.',
         'your_organisations' => 'Your Organisations',
+        'avatar_alt' => 'User Avatar',
+        'username' => 'Username',
+        'id' => 'ID',
+        'you_are_logged_in' => 'You\'re logged in!',
+        'messages' => [
+            'copied' => 'Copied to clipboard!',
+            'copy_failed' => 'Failed to copy!',
+        ],
     ],
 
     'sitemap' => [
