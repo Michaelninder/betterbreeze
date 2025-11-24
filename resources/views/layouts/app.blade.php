@@ -18,6 +18,7 @@
     </head>
     <body class="font-sans antialiased flex flex-col min-h-screen">
         <div class="flex-grow bg-gray-100 dark:bg-gray-900">
+            @include('components.toast-messages')
             @if (!isset($hideNavbar) || $hideNavbar !== true)
                 @include('components.navbar')
             @endif
@@ -43,6 +44,6 @@
             @include('components.scroll-to-top-btn')
         @endif
 
-        @include('components.session-notifications')
+        {{--@include('components.session-notifications')--}}
     </body>
 </html>
